@@ -1,16 +1,17 @@
 #!/usr/bin/python3
-"""Module 3-write_file.
-Writes in a text file.
+"""
+Module 5-to_json_string
+Contains function that returns JSON representation of obj (string)
 """
 
 
-def write_file(filename="", text=""):
-    """Writes text in filename.
+def to_json_string(my_obj):
+    """Returns JSON representation of obj (string)
     Args:
-        - filename: name of the file
-        - text: string to write in the file
-    Returns: number of characters written
+        my_obj: python object
+    Return:
+        json string representation
     """
+    import json
 
-    with open(filename, 'w+') as f:
-        return f.write(text)
+    return json.dumps(my_obj)
