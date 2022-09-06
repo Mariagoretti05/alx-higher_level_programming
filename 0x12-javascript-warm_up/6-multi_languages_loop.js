@@ -1,9 +1,13 @@
 #!/usr/bin/node
+// Script that prints 3 lines.
+const lines = [
+  'C is fun',
+  'Python is cool',
+  'JavaScript is amazing'
+];
 
-const num = Number(process.argv[2]);
+lines.forEach(print);
 
-if (num) {
-  console.log('My number: ' + num);
-} else {
-  console.log('Not a number');
+function print (line) {
+  console.log(line);
 }
