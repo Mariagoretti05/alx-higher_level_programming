@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-""" what's my status """
+"""Fetch content from https://alx-intranet.hbtn.io/status"""
 import requests
 
 
+# Evaluate if running this script directly
 if __name__ == "__main__":
-    r = requests.get('https://intranet.hbtn.io/status')
-    print('Body response:')
-    print('\t- type: {}'.format(type(r.text)))
-    print('\t- content: {}'.format(r.text))
+    url = "https://alx-intranet.hbtn.io/status"
+
+    r = requests.get(url)
+
+    print("Body response:")
+    print("\t- type: {}".format(type(r.text)))
+    print("\t- content: {}".format(r.text))
