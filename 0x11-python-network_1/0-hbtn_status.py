@@ -1,15 +1,17 @@
 #!/usr/bin/python3
-"""A script that 
-- uses urlib package
-"""
+"""Fetch content from https://alx-intranet.hbtn.io/status"""
+import urllib.request
 
 
-if __name__ == '__main__':
-    import urllib.request
+# Evaluate if running this script directly
+if __name__ == "__main__":
+    url = "https://alx-intranet.hbtn.io/status"
 
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as res:
-        content = res.read()
+    with urllib.request.urlopen(url) as response:
+        # Get response body
+        body = response.read()
+
         print("Body response:")
-        print("\t- type: {}".format(type(content)))
-        print("\t- content: {}".format(content))
-        print("\t- utf8 content: {}".format(content.decode('utf-8')))
+        print("\t- type: {}".format(type(body)))
+        print("\t- content: {}".format(body))
+        print("\t- utf8 content: {}".format(body.decode("utf-8")))
